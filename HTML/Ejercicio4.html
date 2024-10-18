@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución Mejorada</title>
+    <link rel="stylesheet" href="/CSS/Ejercicio4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col-izquierda">
+            <label for="Product">Agrega un producto</label> 
+            <input type="text" id="Product" name="Product" placeholder="Banana">
+            <label for="Cost">Precio</label>
+            <input type="number" id="Cost" name="Cost" placeholder="$23.56">
+            <button id="Agregar" type="button">Agregar</button>
+        </div>
+
+        <div class="col-central">
+            <div id="Listado">
+                <ul id="productList"></ul>
+                <h3>Costo total: <span id="totalCost">0</span></h3>
+            </div>
+            <button id="Ordenar" type="button">Ordenar por nombre</button>
+        </div>
+<br>
+        <div class="col-derecha">
+            <label for="Delete">ID para eliminar</label>
+            <input type="text" name="Delete" id="Delete" placeholder="2">
+            <button id="Eliminar" type="button">Eliminar</button>
+        </div>
+    </div>
+
+    <script src="/JS/Ejercicio4.js"></script>
+</body>
+</html>

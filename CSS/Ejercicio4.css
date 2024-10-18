@@ -1,0 +1,94 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Espacio adicional en los bordes de la página */
+}
+
+form {
+    background-color: #fff;
+    padding: 30px; /* Más espacio alrededor del formulario */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Ancho más amplio */
+    display: grid;
+    gap: 20px; /* Más espacio entre los elementos del formulario */
+}
+
+/* Estilo de los inputs y labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px; /* Espacio entre el label y el input */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo de los botones */
+button {
+    padding: 12px 15px; /* Botones más grandes y cómodos */
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4500b5;
+}
+
+/* Estilo de los contenedores */
+#Eliminar, #Listado {
+    margin-top: 20px; /* Más espacio superior para separar estas secciones del formulario */
+}
+
+/* Lista de productos */
+#productList {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px; /* Más espacio antes de la lista */
+}
+
+#productList li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+#totalCost {
+    font-weight: bold;
+    color: #6200ea;
+    margin-top: 10px; /* Espacio antes del costo total */
+}
+
+/* Distribución uniforme usando CSS Grid */
+form {
+    display: grid;
+    grid-template-columns: 1fr; /* Todos los elementos ocupan el ancho completo */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Distribución específica para botones */
+#Desacer, #Listado {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Espacio más amplio entre elementos en estas secciones */
+}
