@@ -1,95 +1,60 @@
+/* Fondo oscuro */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #1b1b1b;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
-    gap: 40px; /* Espacio entre las columnas */
-    width: 80%; /* Ancho total del contenedor */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Título con efecto neón */
+h1 {
+    font-size: 2.5em;
+    color: white; /* Morado neón */
+    text-shadow: 0 0 10px #a64dff, 0 0 20px #a64dff, 0 0 30px #a64dff;
 }
 
-.col-izquierda {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-input[type="text"], input[type="number"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-}
-
+/* Estilo para los botones */
 button {
-    padding: 12px;
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid #a64dff; 
+    color: #a64dff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #a64dff, 0 0 20px #4db8ff, 0 0 30px #4db8ff; 
 }
 
+/* Efecto de resplandor al pasar el mouse sobre los botones */
 button:hover {
-    background-color: #4500b5;
+    
+    background-color: rgb(105, 63, 168);
+    color: white;
+    box-shadow: 0 0 20px #a64dff, 0 0 30px #4db8ff, 0 0 40px #4db8ff;
 }
 
-.col-central {
+/* Contenedor del menú para centrar los botones en filas de dos */
+.menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#productList {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 15px;
-    width: 100%;
+/* Estilo para los enlaces que contienen los botones */
+.menu a {
+    flex: 0 1 45%; /* Cada botón ocupa el 45% del ancho */
+    margin: 10px;
 }
 
-#productList li {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-}
-
-#totalCost {
-    font-weight: bold;
-    color: #6200ea;
-    margin-top: 10px;
-}
-
-.col-derecha {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-}
-
-input[type="text"] {
-    width: 100%;
-}
-
-#Eliminar {
-    width: 100%;
+/* Último botón centrado */
+.menu a:last-child {
+    flex-basis: 100%; /* Ocupa el 100% del ancho */
+    text-align: center;
 }

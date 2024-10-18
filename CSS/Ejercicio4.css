@@ -3,43 +3,48 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 20px; /* Espacio adicional en los bordes de la página */
 }
 
-form {
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+    gap: 40px; /* Espacio entre las columnas */
+    width: 80%; /* Ancho total del contenedor */
+    padding: 20px;
     background-color: #fff;
-    padding: 30px; /* Más espacio alrededor del formulario */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 450px; /* Ancho más amplio */
-    display: grid;
-    gap: 20px; /* Más espacio entre los elementos del formulario */
 }
 
-/* Estilo de los inputs y labels */
+/* Columna izquierda: Agregar producto */
+.col-izquierda {
+    display: flex;
+    flex-direction: column;
+}
+
 label {
     font-weight: bold;
-    display: block;
-    margin-bottom: 8px; /* Espacio entre el label y el input */
+    margin-bottom: 8px;
 }
 
 input[type="text"], input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    width: 100%;
 }
 
-/* Estilo de los botones */
+/* Botón general */
 button {
-    padding: 12px 15px; /* Botones más grandes y cómodos */
+    padding: 12px;
     background-color: #6200ea;
     color: white;
     border: none;
@@ -47,48 +52,50 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 button:hover {
     background-color: #4500b5;
 }
 
-/* Estilo de los contenedores */
-#Eliminar, #Listado {
-    margin-top: 20px; /* Más espacio superior para separar estas secciones del formulario */
+/* Columna central: Listado y total */
+.col-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Lista de productos */
 #productList {
     list-style: none;
     padding-left: 0;
-    margin-top: 15px; /* Más espacio antes de la lista */
+    margin-top: 15px;
+    width: 100%;
 }
 
 #productList li {
     padding: 12px;
     border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
     font-size: 16px;
 }
 
 #totalCost {
     font-weight: bold;
     color: #6200ea;
-    margin-top: 10px; /* Espacio antes del costo total */
+    margin-top: 10px;
 }
 
-/* Distribución uniforme usando CSS Grid */
-form {
-    display: grid;
-    grid-template-columns: 1fr; /* Todos los elementos ocupan el ancho completo */
-    gap: 20px; /* Espacio entre los elementos */
+/* Columna derecha: Eliminar producto */
+.col-derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos a la derecha */
 }
 
-/* Distribución específica para botones */
-#Desacer, #Listado {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px; /* Espacio más amplio entre elementos en estas secciones */
+input[type="text"] {
+    width: 100%;
+}
+
+#Eliminar {
+    width: 100%;
 }
