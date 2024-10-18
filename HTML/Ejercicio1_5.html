@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Productos y Palabras</title>
+    <link rel="stylesheet" href="/CSS/Ejercicios.css">
+</head>
+<body>
+    <a href="index.html"><button>Regresar</button></a>
+    <header>
+        <h1>Aplicación de Productos y Palabras</h1>
+        <nav>
+            <button onclick="showSection('productos')">Ejercicio 1: Productos</button>
+            <button onclick="showSection('palabras')">Ejercicio 5: Palabras</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="productos" class="hidden">
+            <h2>Productos Disponibles</h2>
+            <button onclick="addProduct()">Agregar Producto</button>
+            <button onclick="removeProduct()">Retirar Producto</button>
+            <div id="productList"></div>
+        </section>
+        
+        <section id="palabras" class="hidden">
+            <h2>Listar Palabras por Letra</h2>
+            <input type="text" id="wordInput" placeholder="Escribe palabras separadas por comas">
+            <button onclick="addWords()">Agregar Palabras</button>
+            <div id="wordLists"></div>
+        </section>
+    </main>
+
+    <script src="/JS/Ejercicio1.js"></script>
+</body>
+</html>
